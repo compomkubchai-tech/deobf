@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ravel Deobfuscator</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<main class="shell">
+<nav>
+  <div class="brand"><span class="mark">R</span><span>RAVEL <em>/ DEOBF</em></span></div>
+  <div class="status"><i></i> READY</div>
+</nav>
+<section class="hero">
+  <div class="eyebrow">RAVEL VM · V0.7</div>
+  <h1>Decode the VM.<br><span>Understand the code.</span></h1>
+  <p>deobf</p>
+</section>
+<section class="card">
+  <div class="cardtop"><div><b>DEOBFUSCATOR</b><small>Upload a file or paste source</small></div><label class="safe">SAFE PARSER</label></div>
+  <form action="/deobfuscate" method="post" enctype="multipart/form-data">
+    <label class="drop">
+      <input type="file" name="file" accept=".lua,.txt">
+      <span class="upload">↑</span><strong>เลือกไฟล์ .lua</strong><small>หรือคลิกเพื่อเลือกไฟล์จากเครื่อง</small>
+    </label>
+    <div class="or"><span>OR PASTE SOURCE</span></div>
+    <textarea name="source" placeholder="local P = { ... }
+-- paste your Ravel VM source here"></textarea>
+    <div class="bottom"><span>MAX 2 MB · ANALYSIS ONLY</span><button>Deobfuscate <b>→</b></button></div>
+  </form>
+</section>
+<section class="features">
+  <article><span>01</span><b>Prototype Parser</b><p>อ่าน P tables และ VM metadata</p></article>
+  <article><span>02</span><b>Opcode Decoder</b><p>แปลง Ravel VM instructions</p></article>
+  <article><span>03</span><b>String Recovery</b><p>ถอด decimal masking อัตโนมัติ</p></article>
+</section>
+<footer>RAVEL DEOBFUSCATOR · V0.7</footer>
+</main>
+</body>
+</html>
